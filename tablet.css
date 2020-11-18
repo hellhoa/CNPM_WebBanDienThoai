@@ -33,6 +33,7 @@ body h1 {
     border-style: solid;
     border-width: 0.1px;
     border-color: #eeeeee;
+    text-align: center;
 }
 
 .thuhai {
@@ -40,6 +41,7 @@ body h1 {
     border-style: solid;
     border-width: 0.1px;
     border-color: #eeeeee;
+    text-align: center;
 }
 
 .thuba {
@@ -47,6 +49,7 @@ body h1 {
     border-style: solid;
     border-width: 0.1px;
     border-color: #eeeeee;
+    text-align: center;
 }
 
 .thutu {
@@ -54,6 +57,7 @@ body h1 {
     border-style: solid;
     border-width: 0.1px;
     border-color: #eeeeee;
+    text-align: center;
 }
 
 .ipadpro12 {
@@ -61,6 +65,7 @@ body h1 {
     height: 240px;
     padding: 10px;
     box-sizing: border-box;
+    margin-top: 25px;
 }
 
 .tabsamsung {
@@ -68,6 +73,12 @@ body h1 {
     height: 240px;
     padding: 10px;
     box-sizing: border-box;
+    margin-top: 25px;
+}
+
+.img:hover {
+    margin-top: -15px;
+    zoom: 1.05;
 }
 
 .tabhuawei {
@@ -75,4 +86,15 @@ body h1 {
     height: 240px;
     padding: 10px;
     box-sizing: border-box;
+    margin-top: 25px;
+}
+
+.carousel-control-prev-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.carousel-control-next-icon {
+    width: 60px;
+    height: 60px;
 }
