@@ -5,23 +5,42 @@ body ul{
     padding-left: 0px;
 }
 body h1{
-    font-size: 1.2rem;
-    margin-top: 20px;
+
 }
-.phukien{
+
+.divchung{
     background-color: white;
 }
-.dsphukien{
-    margin-top: 50px;
+
+.lichung:hover{
+    animation: colorBackground 2s infinite;
+    -webkit-animation: colorBackground 5s infinite;
+    -moz-animation: colorBackground 5s infinite;
+    -o-animation: colorBackground 2s infinite;
 }
-.button_tainghe span{
-    border: #eeeeee solid 0.1px;
-    border-radius: 3px;
-    margin-left: 5px;
-}
-.button_tainghe{
-    padding-left: 5px;
-    padding-right: 5px;
-    height: 48px;
-    padding-top: 5px;
-}
+@keyframes colorBackground {
+    0% {
+    background-color: #2ecc71;
+    }
+    25%{
+        background-color: #1abc9c;
+    }
+    50% {
+    background-color:#9b59b6;
+    }
+    75%{
+        background-color: #ecf0f1;
+    }
+    }
+
+.snow-container{position:fixed;width:100%;max-width:100%;z-index:99999;pointer-events:none;overflow:hidden;top:0;height:100%}
+.snow{display:block;position:absolute;z-index:2;top:0;right:0;bottom:0;left:0;pointer-events:none;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);-webkit-animation:snow linear infinite;animation:snow linear infinite}
+.snow.foreground{background-image:url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");-webkit-animation-duration:15s;animation-duration:10s}
+.snow.foreground.layered{-webkit-animation-delay:7.5s;animation-delay:7.5s}
+.snow.middleground{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);-webkit-animation-duration:20s;animation-duration:15s}
+.snow.middleground.layered{-webkit-animation-delay:10s;animation-delay:10s}
+.snow.background{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);-webkit-animation-duration:25s;animation-duration:20s}
+.snow.background.layered{-webkit-animation-delay:12.5s;animation-delay:12.5s}
+@-webkit-keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+@keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+
