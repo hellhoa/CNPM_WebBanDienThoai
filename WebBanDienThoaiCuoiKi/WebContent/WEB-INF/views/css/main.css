@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
+html, body {
+	width: 100%;
+    height: 100%;
+    font-family: 'Itim';
+	font-size: 15px;
+    color: #222;
+    background-color: #f0f0f0;
+}
+body{
+    width: 100%;
+    height: auto;
+}
+body ul{
+    list-style: none;
+    padding-left: 0px;
+}
+body h4{
+    font-size: 1.1rem;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* phần đầu web */
+.navbar{
+    background-color: #27ae60 !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar li a {
+    color: black !important;
+}
+.navbar li a:hover{
+    color: blue !important;
+}
+/* xử lí các nút đki đnhập */
+.button{
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 48px;
+    padding-top: 5px;
+}
+.button:hover{
+    background-color: white;
+}
+.input{
+    margin-left: 40px;
+    width: 650px;
+    border-radius: 3px;
+}
+.cart{
+    margin-left: 30px;
+    color: white;
+    border-style: solid;
+    padding: 4px 4px;
+    border-radius: 3px;
+    border-width: 1px;
+}
+.cart:hover{
+    color: black;
+    background-color: whitesmoke;
+}
+/* xử lí phần menu xanh */
+.menuxanh{
+    background-color: yellowgreen !important;
+    height: 42px;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 30px;
+}
+.menu a{
+    color: black;
+}
+.menu a:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+.carousel-inner img {
+	width: 100%;
+}
+.carousel-caption {
+	position: absolute;
+	top: 50%;
+}
+
+.snow-container{position:fixed;width:100%;max-width:100%;z-index:99999;pointer-events:none;overflow:hidden;top:0;height:100%}
+.snow{display:block;position:absolute;z-index:2;top:0;right:0;bottom:0;left:0;pointer-events:none;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);-webkit-animation:snow linear infinite;animation:snow linear infinite}
+.snow.foreground{background-image:url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");-webkit-animation-duration:15s;animation-duration:10s}
+.snow.foreground.layered{-webkit-animation-delay:7.5s;animation-delay:7.5s}
+.snow.middleground{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);-webkit-animation-duration:20s;animation-duration:15s}
+.snow.middleground.layered{-webkit-animation-delay:10s;animation-delay:10s}
+.snow.background{background-image:url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);-webkit-animation-duration:25s;animation-duration:20s}
+.snow.background.layered{-webkit-animation-delay:12.5s;animation-delay:12.5s}
+@-webkit-keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+@keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
+/* xử lí phần menu */
+.chung{
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 50px;
+    color: white;
+    height: 42px;
+    font-size: 1.2rem;
+}
+
+.chung:hover{
+    background-color: white;
+}
+.tieudetrai{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.tieudetrai a{
+    font-size: 1.5rem;
+}
+.tieudetrai a:hover{
+    text-decoration: none;
+}
+/* điện thoại nổi bật */
+.dienthoainoibat{
+    margin-top: 10px;
+    background-color: white;
+    height: 864px;
+}
+.thunhatdienthoai{
+    border: #eeeeee solid 0.1px;
+    width: 25%;
+    height: 100%;
+}
+.dsdienthoai{
+    padding-left: 0px;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    height: 45%;
+}
+/* lap top nôi bật */
+.laptopnoibat{
+    margin-top: 10px;
+    background-color:white;
+    height: 432px;
+}
+.tabletnoibat{
+    margin-top: 10px;
+    background-color: white;
+    height: 432px;
+}
+/* phụ kiện  */
+.phukiengiare{
+    margin-top: 10px;
+    background-color: white;
+    height: 432px;
+}
+.phukiengiare h3{
+    background-color: chartreuse;
+}
+.dsphukien{
+    padding-left: 0px;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    height: 91%;
+}
+.thunhat{
+    border: #eeeeee solid 0.1px;
+    width: 25%;
+    height: 95%;
+}
+.img{
+    text-align: center;
+}
+.img a{
+    color: black;
+}
+.img a:hover{
+    text-decoration: none;
+    margin-top: 5px;
+    color: blue;
+}
+.hinhanh{
+    margin-top: 15px;
+}
+.hinhanh:hover{
+    margin-top: 5px;
+}
+.button span{
+    border: #eeeeee solid 0.1px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+.money{
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.thuhai{
+    border: #eeeeee solid 0.1px;
+    width: 25%;
+    height: 100%;
+}
+.thuhai .button{
+    margin-top: 26.7px;
+}
+.thuba{
+    border: #eeeeee solid 0.1px;
+    width: 25%;
+    height: 100%;
+}
+.thutu{
+    border: #eeeeee solid 0.1px;
+    width: 25%;
+    height: 100%;
+}
+
+
+.donghothongminh{
+    margin-top: 10px;
+    background-color: white;
+    height: 452px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin-top: 5px;
+	background-color: #32ff7e;
+	color: black;
+}
+hr.light {
+	border-top: 1px solid black;
+	width: 75%;
+}
+.light-100 {
+	border-top: 1px solid black;
+	width: 100%;
+}
+
+/* xử lí theo màn hình  */
+@media(max-width:1500){
+    
+}
+
+@media (max-width: 1100px){
+    .input{
+        width: 450px;
+    }
+}
+@media (max-width: 768px){
+
+}
+@media (max-width: 576px){
+    .input{
+        display: none;
+    }
+    .menuxanh{
+        display: none;
+    }
+    .submit{
+        display: none;
+    }
+}
