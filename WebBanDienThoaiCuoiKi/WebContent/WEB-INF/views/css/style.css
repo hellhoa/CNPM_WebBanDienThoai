@@ -1,0 +1,59 @@
+@charset "UTF-8";
+body{
+    background-image: none;
+}
+body ul{
+    padding-left: 0px;
+}
+body h1{
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+body a:hover{
+	text-decoration:none;
+	color:white;
+}
+.chungtatca{
+    background-color: white;
+}
+.dschung{
+    margin-top: 50px;
+    padding-left: 0px;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    height: 91%;
+}
+.lichung{
+    border: #eeeeee solid 0.1px;
+    width: 25%;
+    height: 100%;
+}
+
+/* từng sản phẩm */
+.sanphamchinh{
+    display: flex;
+    list-style: none;
+    width: 100%;
+}
+.sanphamchinh li{
+    width: 50%;
+    margin-top: 20px;
+}
+.sanphamchinh button{
+    color: white;
+    font-size: 1.2rem;
+    background-color: green;
+}
+.sanphamchinh button:hover{
+    color: black;
+}
+.hinhanh_gia{
+    width: 100%;
+}
+.ul_phai li{
+    margin-left: 20px;
+}
+#themgiohang:hover{
+	color:white;
+}
