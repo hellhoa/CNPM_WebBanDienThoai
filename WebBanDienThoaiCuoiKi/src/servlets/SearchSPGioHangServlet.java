@@ -67,6 +67,8 @@ public class SearchSPGioHangServlet extends HttpServlet {
 			request.setAttribute("dienthoai", dt);
 			request.setAttribute("tenkhachhang", tenkhachhang);
 			request.setAttribute("tenTK", tenTK);
+			String soluong = request.getParameter("soluong");
+			request.setAttribute("soluong", soluong);
 			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/SanPhamDienThoai.jsp");
 			dispatcher.forward(request, response);
 		}
@@ -76,6 +78,8 @@ public class SearchSPGioHangServlet extends HttpServlet {
 			request.setAttribute("laptop", lt);
 			request.setAttribute("tenkhachhang", tenkhachhang);
 			request.setAttribute("tenTK", tenTK);
+			String soluong = request.getParameter("soluong");
+			request.setAttribute("soluong", soluong);
 			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/SanPhamLapTop.jsp");
 			dispatcher.forward(request, response);
 		}
@@ -85,6 +89,8 @@ public class SearchSPGioHangServlet extends HttpServlet {
 			request.setAttribute("tablet", tb);
 			request.setAttribute("tenkhachhang", tenkhachhang);
 			request.setAttribute("tenTK", tenTK);
+			String soluong = request.getParameter("soluong");
+			request.setAttribute("soluong", soluong);
 			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/SanPhamTablet.jsp");
 			dispatcher.forward(request, response);
 		}
@@ -94,6 +100,8 @@ public class SearchSPGioHangServlet extends HttpServlet {
 			request.setAttribute("phukien", pk);
 			request.setAttribute("tenkhachhang", tenkhachhang);
 			request.setAttribute("tenTK", tenTK);
+			String soluong = request.getParameter("soluong");
+			request.setAttribute("soluong", soluong);
 			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/SanPhamPhuKien.jsp");
 			dispatcher.forward(request, response);
 		}
@@ -103,6 +111,8 @@ public class SearchSPGioHangServlet extends HttpServlet {
 			request.setAttribute("dongho", dh);
 			request.setAttribute("tenkhachhang", tenkhachhang);
 			request.setAttribute("tenTK", tenTK);
+			String soluong = request.getParameter("soluong");
+			request.setAttribute("soluong", soluong);
 			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/views/SanPhamDongHo.jsp");
 			dispatcher.forward(request, response);
 		}
