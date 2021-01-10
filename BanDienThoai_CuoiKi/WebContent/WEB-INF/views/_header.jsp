@@ -59,33 +59,33 @@
     <!-- xử lí phần menu -->
     <div class="menuxanh">
         <div class="container">
-            <ul class="menu">
-                <li class="chung ">
+            <ul class="row menu">
+                <li class="col-md-2 chung " >
                     <a href="DienThoaiList?tenkhachhang=${tenkhachhang}&tenTK=${tenTK}&soluong=${soluong}">
                         <i class="fas fa-mobile-alt">   Điện thoại</i> 
                     </a>
                 </li>
-                <li class=" chung">
+                <li class="col-md-2 chung">
                     <a href="LTList?tenkhachhang=${tenkhachhang }&tenTK=${tenTK}&soluong=${soluong}">
                         <i class="fas fa-laptop">  LapTop</i>
                     </a>
                 </li>
-                <li class="chung">
+                <li class="col-md-2 chung">
                     <a href="TBList?tenkhachhang=${tenkhachhang }&tenTK=${tenTK}&soluong=${soluong}">
                         <i class="fas fa-tablet-alt">  Tablet</i>
                     </a>
                 </li>
-                <li class="chung">
+                <li class="col-md-2 chung">
                     <a href="PKList?tenkhachhang=${tenkhachhang }&tenTK=${tenTK}&soluong=${soluong}">
                         <i class="fas fa-headphones">  Phụ kiện</i>
                     </a>
                 </li>
-                <li class="chung">
+                <li class="col-md-2 chung">
                     <a href="DongHoList?tenkhachhang=${tenkhachhang }&tenTK=${tenTK}&soluong=${soluong}">
                         <i class="fas fa-clock">   Đồng hồ</i>
                     </a>
                 </li>
-                <li class="chung">
+                <li class="col-md-2 chung">
                     <a href="PCList?tenkhachhang=${tenkhachhang }&tenTK=${tenTK}&soluong=${soluong}">
                         <i class="fas fa-desktop">  PC,Máy in</i>
                     </a>

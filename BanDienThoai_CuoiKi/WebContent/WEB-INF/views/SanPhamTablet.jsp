@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,18 +21,18 @@
  <body>
  	<jsp:include page="_header.jsp"></jsp:include>
  	<div class="container">
-        <div class="sanpham">
+        <div class="row sanpham">
             <h2 style="margin-top:20px">${tablet.ten}</h2>
-            <ul class="sanphamchinh">
+            <ul class="col-md-12 sanphamchinh">
                 <li>
                 <form method="POST" action="GioHang?tenTK=${tenTK}&maTB=${tablet.maTB}">
-                    <ul class="hinhanh_gia">
+                    <ul class="col-md-12 hinhanh_gia">
                         <li style="width:100%; text-align: center;">
-                            <img src="data:image/png;base64,${tablet.hinhanh }" alt="" width="400px" height="460px">
+                            <img src="data:image/png;base64,${tablet.hinhanh }" alt="" width="400px" height="auto" class="col-md-10">
 
                         </li >
                         <li style="width:100%; text-align: center; margin-top: 20px; color: red;">
-                            <span style="font-size: 2rem;">${tablet.dongia}  đ</span>
+                            <span style="font-size: 2rem;"><fmt:formatNumber type="number" groupingUsed="true" value="${tablet.dongia }"/>  VND</span>
                         </li>
                         <li style="width:100%; text-align: center; margin-top: 20px; color: red;" id="soluong">
                             <span style="font-size: 2rem;">Số Lượng: </span>
@@ -44,7 +45,7 @@
                     </form>
                 </li>
                 <li>
-                    <ul style="height: 100%; width: 100%;" class="ul_phai">
+                    <ul style="height: 100%; width: 100%;" class="col-md-12 ul_phai">
                         <li style="width:100%;">
                             <h2>Thông Số Kỹ Thuật</h2>
                         </li>
@@ -61,57 +62,66 @@
                     </ul>
                 </li>
             </ul>
-            <h3 style="margin-top:20px">
+            <h3 style="margin-top:20px" id="tieude">
                 ${baiviet.tieude}
             </h3>
-            <h5>
+            <h5 id="noidung1">
                 ${baiviet.noidung1}
             </h5>
-            
-            <img src="data:image/png;base64,${baiviet.hinhanh1 }" alt="" width="100%" height="460px">
-            <h5>
+            <img src="data:image/png;base64,${baiviet.hinhanh1 }" alt="" width="100%" height="460px" id="hinhanh1">
+            <h5 id="noidung2">
                 ${baiviet.noidung2}
             </h5>
-            <img src="data:image/png;base64,${baiviet.hinhanh2 }" alt="" width="100%" height="460px">
-            <h5>
+            <img src="data:image/png;base64,${baiviet.hinhanh2 }" alt="" width="100%" height="460px" id="hinhanh2">
+            <h5 id="noidung3">
                 ${baiviet.noidung3}
             </h5>
-            <img src="data:image/png;base64,${baiviet.hinhanh3 }" alt="" width="100%" height="460px">
-            <h5>
+            <img src="data:image/png;base64,${baiviet.hinhanh3 }" alt="" width="100%" height="460px" id="hinhanh3">
+            <h5 id="noidung4">
                 ${baiviet.noidung4}
             </h5>
-            <img src="data:image/png;base64,${baiviet.hinhanh4 }" alt="" width="100%" height="460px">
-            <h5>
+            <img src="data:image/png;base64,${baiviet.hinhanh4 }" alt="" width="100%" height="460px" id="hinhanh4">
+            <h5 id="noidung5">
                 ${baiviet.noidung5}
             </h5>
-            <img src="data:image/png;base64,${baiviet.hinhanh5 }" alt="" width="100%" height="460px">
-            <h5>
+            <img src="data:image/png;base64,${baiviet.hinhanh5 }" alt="" width="100%" height="460px" id="hinhanh5">
+            <h5 id="noidung6">
                 ${baiviet.noidung6}
             </h5>
-            <img src="data:image/png;base64,${baiviet.hinhanh6 }" alt="" width="100%" height="460px">
-            <h5>
+            <img src="data:image/png;base64,${baiviet.hinhanh6 }" alt="" width="100%" height="460px" id="hinhanh6">
+            <h5 id="noidung7">
                 ${baiviet.noidung7}
             </h5>
-            <img src="data:image/png;base64,${baiviet.hinhanh7 }" alt="" width="100%" height="460px">
-            <h5>
+            <img src="data:image/png;base64,${baiviet.hinhanh7 }" alt="" width="100%" height="460px" id="hinhanh7">
+            <h5 id="noidung8">
                 ${baiviet.noidung8}
             </h5>
-            <img src="data:image/png;base64,${baiviet.hinhanh8 }" alt="" width="100%" height="460px">
-            
+            <img src="data:image/png;base64,${baiviet.hinhanh8 }" alt="" width="100%" height="460px" id="hinhanh8">
+          
         </div>
     </div>
     <jsp:include page="_footer.jsp"></jsp:include>
-    <c:if test ="${not empty chuadangnhap}">
-    <script>
-    	document.getElementById("themgiohang").style.display ='none';
-    	document.getElementById("soluong").style.display='none';
-    </script>
-    </c:if>
     <c:if test="${not empty kiemtra }">
     <script>
     	document.getElementById("themgiohang").style.display='none';
     	document.getElementById("soluong").style.display='none';
-    	document.getElementById("btn2").style.display='none';
+    	document.getElementById("tieude").style.display='none';
+    	document.getElementById("noidung1").style.display='none';
+    	document.getElementById("noidung2").style.display='none';
+    	document.getElementById("noidung3").style.display='none';
+    	document.getElementById("noidung4").style.display='none';
+    	document.getElementById("noidung5").style.display='none';
+    	document.getElementById("noidung6").style.display='none';
+    	document.getElementById("noidung7").style.display='none';
+    	document.getElementById("noidung8").style.display='none';
+    	document.getElementById("hinhanh1").style.display='none';
+    	document.getElementById("hinhanh2").style.display='none';
+    	document.getElementById("hinhanh3").style.display='none';
+    	document.getElementById("hinhanh4").style.display='none';
+    	document.getElementById("hinhanh5").style.display='none';
+    	document.getElementById("hinhanh6").style.display='none';
+    	document.getElementById("hinhanh7").style.display='none';
+    	document.getElementById("hinhanh8").style.display='none';
     </script>
     </c:if>
     </body>

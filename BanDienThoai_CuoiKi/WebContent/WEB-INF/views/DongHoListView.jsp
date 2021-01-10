@@ -22,27 +22,27 @@
   	<jsp:include page="_header.jsp"></jsp:include>
   	<div class="container">
         <div class="row chungtatca">
-  			<img class="col-md-12" src="./image/imagelaptop1.png" alt="" width="100%">
-  			<img class="col-md-12" src="./image/imagelaptop2.png" alt="" width="100%">
-    		<img class="col-md-12" src="./image/imagelaptop3.png " alt="" width="100%">
-    		<h1>LAPTOP</h1>
+  			<img class="col-md-12" src="./image/1200-350-1200x350-3.png" alt="" width="100%">
+  			<img class="col-md-12" src="./image/1200-350-1200x350-18.png" alt="" width="100%">
+    		<img class="col-md-12" src="./image/1200-350-1200x350-20.png " alt="" width="100%">
+    		<h1>ĐỒNG HỒ</h1>
 			<ul class="col-md-12 dschung">
 				<%int i =1; %>
-				<c:forEach items="${ listLT}" var="laptop">
+				<c:forEach items="${DHList}" var="dh">
 				<li class="lichung">
         			<ul>
             			<li class="img">
-                			<a href="LapTop?maLT=${laptop.maLT}&tenkhachhang=${tenkhachhang}&tenTK=${tenTK}&soluong=${soluong}">
-                    			<img class="col-md-8 hinhanh" src="data:image/png;base64,${laptop.hinhanh }" alt="" width="180px" height="120px">
-                       			<h4>${laptop.ten}</h4>
+                			<a href="DongHo?maDH=${dh.maDH}&tenkhachhang=${tenkhachhang}&tenTK=${tenTK}&soluong=${soluong}">
+                    			<img class="col-md-8 hinhanh" src="data:image/png;base64,${dh.hinhanh }" alt="" width="180px" height="180px">
+                       			<h4>${dh.ten}</h4>
                     		</a>
                 		</li>
                 		<li class="button">
-                    		<span>${laptop.dacdiem1 }</span>
-                    		<span>${laptop.dacdiem2}</span>
+                    		<span>${dh.dacdiem1 }</span>
+                    		<span>${dh.dacdiem2 }</span>
                			</li>
                 		<li class="money">
-                    		<strong><fmt:formatNumber type="number" groupingUsed="true" value="${laptop.dongia }"/>  VND</strong>
+                    		<strong><fmt:formatNumber type="number" groupingUsed="true" value="${dh.dongia }"/>  VND</strong>
                 		</li>
             		</ul>
          		</li>

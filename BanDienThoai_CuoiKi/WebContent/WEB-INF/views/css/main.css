@@ -81,13 +81,12 @@ body h4{
 /* xử lí phần menu xanh */
 .menuxanh{
     background-color: yellowgreen !important;
-    height: 42px;
+    height: auto;
 }
 .menu{
     display: flex;
     list-style: none;
     padding-left: 0px;
-    margin-left: 30px;
 }
 .menu a{
     color: black;
@@ -117,13 +116,11 @@ body h4{
 @keyframes snow{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{-webkit-transform:translate3d(5%,100%,0);transform:translate3d(5%,100%,0)}}
 /* xử lí phần menu */
 .chung{
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 50px;
     color: white;
     height: 42px;
     font-size: 1.2rem;
+    text-align:center;
+    padding-top:7px;
 }
 
 .chung:hover{
@@ -282,12 +279,11 @@ hr.light {
 }
 
 @media (max-width: 1100px){
-    .input{
-        width: 450px;
-    }
 }
 @media (max-width: 768px){
-
+	.input{
+		display:none;
+	}
 }
 @media (max-width: 576px){
     .input{
@@ -298,5 +294,17 @@ hr.light {
     }
     .submit{
         display: none;
+    }
+    .laptopnoibat .button{
+    	display:none;
+    }
+    .laptopnoibat {
+    	height:350px;
+    }
+    .phukiengiare .button{
+    	display:none;
+    }
+    .donghothongminh .button{
+    	display:none;
     }
 }

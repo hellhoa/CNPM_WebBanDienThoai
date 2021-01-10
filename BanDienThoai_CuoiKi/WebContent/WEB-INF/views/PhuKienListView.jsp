@@ -22,27 +22,27 @@
   	<jsp:include page="_header.jsp"></jsp:include>
   	<div class="container">
         <div class="row chungtatca">
-  			<img class="col-md-12" src="./image/imagelaptop1.png" alt="" width="100%">
-  			<img class="col-md-12" src="./image/imagelaptop2.png" alt="" width="100%">
-    		<img class="col-md-12" src="./image/imagelaptop3.png " alt="" width="100%">
-    		<h1>LAPTOP</h1>
+  			<img class="col-md-12" src="./image/800-170(3)-800x170.jpg" alt="" width="100%">
+  			<img class="col-md-12" src="./image/800-170-800x170-33.png" alt="" width="100%">
+    		<img class="col-md-12" src="./image/big-pk-800-170-800x170-1.png " alt="" width="100%">
+    		<h1>PHỤ KIỆN</h1>
 			<ul class="col-md-12 dschung">
 				<%int i =1; %>
-				<c:forEach items="${ listLT}" var="laptop">
+				<c:forEach items="${PKList}" var="pk">
 				<li class="lichung">
         			<ul>
             			<li class="img">
-                			<a href="LapTop?maLT=${laptop.maLT}&tenkhachhang=${tenkhachhang}&tenTK=${tenTK}&soluong=${soluong}">
-                    			<img class="col-md-8 hinhanh" src="data:image/png;base64,${laptop.hinhanh }" alt="" width="180px" height="120px">
-                       			<h4>${laptop.ten}</h4>
+                			<a href="PhuKien?maPK=${pk.maPK}&tenkhachhang=${tenkhachhang}&tenTK=${tenTK}&soluong=${soluong}">
+                    			<img class="col-md-8 hinhanh" src="data:image/png;base64,${pk.hinhanh }" alt="" width="180px" height="180px">
+                       			<h4>${pk.ten}</h4>
                     		</a>
                 		</li>
                 		<li class="button">
-                    		<span>${laptop.dacdiem1 }</span>
-                    		<span>${laptop.dacdiem2}</span>
+                    		<span>${pk.dacdiem1}</span>
+                    		<span>${pk.dacdiem2}</span>
                			</li>
                 		<li class="money">
-                    		<strong><fmt:formatNumber type="number" groupingUsed="true" value="${laptop.dongia }"/>  VND</strong>
+                    		<strong><fmt:formatNumber type="number" groupingUsed="true" value="${pk.dongia }"/>  VND</strong>
                 		</li>
             		</ul>
          		</li>

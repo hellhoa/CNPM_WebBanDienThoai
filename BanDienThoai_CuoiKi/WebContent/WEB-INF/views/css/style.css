@@ -82,3 +82,11 @@ button a:hover{
 .thongtinkhachhang a:hover{
 	color:red;
 }
+
+
+
+@media (max-width: 576px){
+	.chungtatca .button{
+		display:none;
+	}
+}

@@ -22,34 +22,36 @@
   	<jsp:include page="_header.jsp"></jsp:include>
   	<div class="container">
         <div class="row chungtatca">
-  			<img class="col-md-12" src="./image/imagelaptop1.png" alt="" width="100%">
-  			<img class="col-md-12" src="./image/imagelaptop2.png" alt="" width="100%">
-    		<img class="col-md-12" src="./image/imagelaptop3.png " alt="" width="100%">
-    		<h1>LAPTOP</h1>
+  			<img class="col-md-12" src="./image/Man-hinh-asus-800-170-800x170.png" alt="" width="100%">
+  			<img class="col-md-12" src="./image/may-bo-800-170-800x170.png" alt="" width="100%">
+    		<img class="col-md-12" src="./image/man-hinh-samsung-800-170-800x170.png " alt="" width="100%">
+    		<h1>MÀN HÌNH MÁY TÍNH</h1>
 			<ul class="col-md-12 dschung">
 				<%int i =1; %>
-				<c:forEach items="${ listLT}" var="laptop">
+				<c:forEach items="${PCList}" var="pc">
 				<li class="lichung">
         			<ul>
             			<li class="img">
-                			<a href="LapTop?maLT=${laptop.maLT}&tenkhachhang=${tenkhachhang}&tenTK=${tenTK}&soluong=${soluong}">
-                    			<img class="col-md-8 hinhanh" src="data:image/png;base64,${laptop.hinhanh }" alt="" width="180px" height="120px">
-                       			<h4>${laptop.ten}</h4>
+                			<a href="PC?maPC=${pc.maPC}&tenkhachhang=${tenkhachhang}&tenTK=${tenTK}&soluong=${soluong}">
+                    			<img class="col-md-8 hinhanh" src="data:image/png;base64,${pc.hinhanh }" alt="" width="180px" height="180px">
+                       			<h4>${pc.ten}</h4>
                     		</a>
                 		</li>
                 		<li class="button">
-                    		<span>${laptop.dacdiem1 }</span>
-                    		<span>${laptop.dacdiem2}</span>
+                    		<span>${pc.dacdiem1 }</span>
+               			</li>
+               			<li class="button">
+               			   	<span>${pc.dacdiem2 }</span>
                			</li>
                 		<li class="money">
-                    		<strong><fmt:formatNumber type="number" groupingUsed="true" value="${laptop.dongia }"/>  VND</strong>
+                    		<strong><fmt:formatNumber type="number" groupingUsed="true" value="${pc.dongia }"/>  VND</strong>
                 		</li>
             		</ul>
          		</li>
 				<%if(i ==4){
 				i=0;
 				out.print("</ul>");
-				out.print("<ul class='col-md-12 dschung'>");
+				out.print("<ul class='dschung'>");
 				}%>
 				<%i =i+1;%>
 				</c:forEach>

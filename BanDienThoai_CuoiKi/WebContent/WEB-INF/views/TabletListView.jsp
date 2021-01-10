@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,34 +21,34 @@
  <body>
   	<jsp:include page="_header.jsp"></jsp:include>
   	<div class="container">
-        <div class="chungtatca">
-  			<img src="./image/800-170-800x170-55.png" alt="" width="100%">
-  			<img src="./image/huawei-tab-800-170-800x170.png" alt="" width="100%">
-    		<img src="./image/tab-s7-800-170-800x170-2.png " alt="" width="100%">
+        <div class="row chungtatca">
+  			<img class="col-md-12" src="./image/800-170-800x170-55.png" alt="" width="100%">
+  			<img class="col-md-12" src="./image/huawei-tab-800-170-800x170.png" alt="" width="100%">
+    		<img class='col-md-12' src="./image/tab-s7-800-170-800x170-2.png " alt="" width="100%">
     		<h1>TABLET</h1>
-			<ul class="dschung">
+			<ul class="col-md-12 dschung">
 				<%int i =1; %>
 				<c:forEach items="${TBList}" var="tb">
 				<li class="lichung">
         			<ul>
             			<li class="img">
                 			<a href="Tablet?maTB=${tb.maTB}&tenkhachhang=${tenkhachhang}&tenTK=${tenTK}&soluong=${soluong}">
-                    			<img class="hinhanh" src="data:image/png;base64,${tb.hinhanh }" alt="" width="180px" height="180px">
-                       			<h3>${tb.ten}</h3>
+                    			<img class="col-md-8 hinhanh" src="data:image/png;base64,${tb.hinhanh }" alt="" width="180px" height="180px">
+                       			<h4>${tb.ten}</h4>
                     		</a>
                 		</li>
                 		<li class="button">
                     		<span></span>
                			</li>
                 		<li class="money">
-                    		<strong>${tb.dongia} đ</strong>
+                    		<strong><fmt:formatNumber type="number" groupingUsed="true" value="${tb.dongia }"/>  VND</strong>
                 		</li>
             		</ul>
          		</li>
 				<%if(i ==4){
 				i=0;
 				out.print("</ul>");
-				out.print("<ul class='dschung'>");
+				out.print("<ul class='col-md-12 dschung'>");
 				}%>
 				<%i =i+1;%>
 				</c:forEach>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-   <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+       <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+       <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,21 +22,21 @@
  	<jsp:include page="_header.jsp"></jsp:include>
  	<div class="container">
         <div class="row sanpham">
-            <h2 style="margin-top:20px">${laptop.ten}</h2>
-            <ul class="col-md-12 sanphamchinh">
+            <h2 style="margin-top:20px">${pc.ten}</h2>
+            <ul class="col-md-12 sanphamchinh" >
                 <li>
-                <form method="POST" action="GioHang?tenTK=${tenTK}&maLT=${laptop.maLT}">
-                    <ul class="col-md-12 hinhanh_gia">
+                <form method="POST" action="GioHang?tenTK=${tenTK}&maPC=${pc.maPC}">
+                    <ul class="col-md-12 hinhanh_gia" >
                         <li style="width:100%; text-align: center;">
-                            <img src="data:image/png;base64,${laptop.hinhanh }" alt="" width="400px" height="auto" class="col-md-10">
+                            <img src="data:image/png;base64,${pc.hinhanh }" alt="" width="400px" height="auto" class="col-md-10">
 
                         </li >
                         <li style="width:100%; text-align: center; margin-top: 20px; color: red;">
-                            <span style="font-size: 2rem;"><fmt:formatNumber type="number" groupingUsed="true" value="${laptop.dongia }"/>  VND</span>
+                            <span style="font-size: 2rem;"><fmt:formatNumber type="number" groupingUsed="true" value="${pc.dongia }"/>  VND</span>
                         </li>
                         <li style="width:100%; text-align: center; margin-top: 20px; color: red;" id="soluong">
                             <span style="font-size: 2rem;">Số Lượng: </span>
-                            <input type="number" name="soluong" min="1" max="20" value="1" />
+                            <input type="number" name="soluong" min="1" max="20" value="1"  />
                         </li>
                         <li style="width:100%; text-align: center; margin-top: 20px;">
                             <input type="submit" class="btn" value="Thêm Giỏ Hàng" style="border:solid;background-color:green;" id="themgiohang">
@@ -49,20 +49,17 @@
                         <li style="width:100%;">
                             <h2>Thông Số Kỹ Thuật</h2>
                         </li>
-                        <li>CPU: ${laptop.cpu }</li>
-                        <li>RAM: ${laptop.ram }</li>
-                        <li>Ổ cứng: ${laptop.ocung}</li>
-                        <li>Màn hình: ${laptop.manhinh }</li>
-                        <li>Card màn hình: ${laptop.cardmanhinh }</li>
-                        <li>Cổng kết nối: ${laptop.congketnoi }</li>
-                        <li>Hệ Điều Hành: ${laptop.hedieuhanh}</li>
-                        <li>Thiết Kế: ${laptop.thietke }</li>
-                        <li>Kích Thước: ${laptop.kichthuoc}</li>
-                        <li>Thời Điểm Ra Mắt: ${laptop.thoidiemramat}</li>
+                        <li>Kích thước màn hinh: ${pc.kichthuocmanhinh }</li>
+                        <li>Độ phân giải: ${pc.dophangiai}</li>
+                        <li>Công nghệ màn hình: ${pc.congnghemanhinh }</li>
+                        <li>Độ tương phản: ${pc.dotuongphan }</li>
+                        <li>Thời gian đáp ứng : ${pc.thoigiandapung }</li>
+                        <li>Góc nhìn: ${pc.gocnhin}</li>
                     </ul>
                 </li>
             </ul>
-            <h3 style="margin-top:20px" id="tieude">
+            
+            <!-- <h3 style="margin-top:20px" id="tieude">
                 ${baiviet.tieude}
             </h3>
             <h5 id="noidung1">
@@ -96,13 +93,13 @@
             <h5 id="noidung8">
                 ${baiviet.noidung8}
             </h5>
-            <img src="data:image/png;base64,${baiviet.hinhanh8 }" alt="" width="100%" height="460px" id="hinhanh8">
+            <img src="data:image/png;base64,${baiviet.hinhanh8 }" alt="" width="100%" height="460px" id="hinhanh8">-->
             
         </div>
     </div>
     <jsp:include page="_footer.jsp"></jsp:include>
-    <c:if test="${not empty kiemtra }">
-    	<script>
+	<c:if test="${not empty kiemtra }">
+    <script>
     	document.getElementById("themgiohang").style.display='none';
     	document.getElementById("soluong").style.display='none';
     	document.getElementById("tieude").style.display='none';
@@ -122,7 +119,7 @@
     	document.getElementById("hinhanh6").style.display='none';
     	document.getElementById("hinhanh7").style.display='none';
     	document.getElementById("hinhanh8").style.display='none';
-    	</script>
+    </script>
     </c:if>
     </body>
 </html>
