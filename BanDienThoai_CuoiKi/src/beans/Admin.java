@@ -1,5 +1,4 @@
 package beans;
-
 public class Admin {
 	private int maAD;
 	private String tenTK;
